@@ -1,0 +1,24 @@
+{
+  "name": "solana-trading-bots",
+  "version": "1.0.0",
+  "description": "Automated Solana trading bots with Bitcoin price prediction",
+  "main": "survival-bot/index.js",
+  "scripts": {
+    "start:trader": "node survival-bot/index.js",
+    "start:btc": "node btc-predictor/index.js",
+    "start": "concurrently \"npm run start:trader\" \"npm run start:btc\""
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "@solana/web3.js": "^1.87.0",
+    "@solana/spl-token": "^0.3.9",
+    "bs58": "^5.0.0",
+    "concurrently": "^8.2.0"
+  },
+  "keywords": ["solana", "trading", "bot", "crypto", "bitcoin"],
+  "author": "Chappie",
+  "license": "MIT"
+}
